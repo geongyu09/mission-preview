@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 interface InputProps {
   fullWidth?: boolean;
+  state?: "default" | "error";
 }
 
 const Input = styled.input<InputProps>`
@@ -16,6 +17,11 @@ const Input = styled.input<InputProps>`
     outline: none;
     border: 1px solid #000000;
   }
+  ${({ state }) =>
+    state === "error" &&
+    `
+    border: 1px solid #ff0000;
+  `}
 `;
 
 export default Input;

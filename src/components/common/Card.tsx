@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import masterCard from "../assets/Mastercard.png";
+// import masterCard from "../assets/Mastercard.png";
 
 interface CardProps {
   cardNumber: number;
@@ -38,7 +38,7 @@ const Card = ({ cardNumber, validityPeriod }: CardProps) => {
     <Wrapper>
       <ChipWrapper>
         <Chip />
-        <MasterCardImg src={masterCard} />
+        {/* <MasterCardImg src={masterCard} /> */}
       </ChipWrapper>
       <CardNumberWrapper>
         {shownCardNumberParts.map((part, index) => (
