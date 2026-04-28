@@ -1,5 +1,7 @@
+import AddCardPage from "./page/AddCardPage";
+
 function App() {
-  return null;
+  return <AddCardPage />;
 }
 
 export default App;
