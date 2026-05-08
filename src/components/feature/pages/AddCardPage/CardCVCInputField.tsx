@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import FieldLayout from "../common/FieldLayout";
-import Input from "../common/Input";
+import FieldLayout from "../../../common/shared/layout/FieldLayout";
+import Input from "../../../common/shared/ui/Input";
 
-const CardNumberInputField = () => {
+const CardCVCInputField = () => {
   return (
     <FieldLayout
       labelComponent={<label htmlFor="cardNumber">카드 번호</label>}
@@ -25,4 +25,4 @@ const HelperText = styled.p`
   vertical-align: middle;
 `;
 
-export default CardNumberInputField;
+export default CardCVCInputField;

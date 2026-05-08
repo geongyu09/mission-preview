@@ -1,38 +1,17 @@
 import styled from "@emotion/styled";
+import { splitCardNumber } from "../../../../../utils/card";
 // import masterCard from "../assets/Mastercard.png";
 
 interface CardProps {
   cardNumber: number;
-  validityPeriod: {
-    month: number;
-    year: number;
-  };
 }
 
-function splitCardNumber(cardNumber: number) {
-  const result: number[] = [];
-
-  const output: number[] = [];
-
-  `${cardNumber}`.split("").forEach((nbr) => {
-    output.push(+nbr);
-
-    if (output.length === 4) {
-      result.push(+output.join(""));
-      output.length = 0;
-    }
-  });
-
-  return result;
-}
-
-const Card = ({ cardNumber, validityPeriod }: CardProps) => {
-  const cardNumberParts = splitCardNumber(cardNumber);
+const Card = ({ cardNumber }: CardProps) => {
+  const cardNumberParts = splitCardNumber(`${cardNumber}`);
   const shownCardNumberParts = cardNumberParts.map((part, index) => {
     if (index > 1) return "****";
     return part;
   });
-  const { month, year } = validityPeriod;
 
   return (
     <Wrapper>
@@ -46,9 +25,7 @@ const Card = ({ cardNumber, validityPeriod }: CardProps) => {
         ))}
       </CardNumberWrapper>
       <CardValidityPeriodWrapper>
-        <CardValidityPeriodUnit>
-          {month}/{year}
-        </CardValidityPeriodUnit>
+        <CardValidityPeriodUnit>{/* {month}/{year} */}</CardValidityPeriodUnit>
       </CardValidityPeriodWrapper>
     </Wrapper>
   );
@@ -75,10 +52,10 @@ const Chip = styled.div`
   border-radius: 0.2rem;
 `;
 
-const MasterCardImg = styled.img`
-  width: 2.25rem;
-  height: 1.5rem;
-`;
+// const MasterCardImg = styled.img`
+//   width: 2.25rem;
+//   height: 1.5rem;
+// `;
 
 const CardNumberWrapper = styled.div`
   display: flex;

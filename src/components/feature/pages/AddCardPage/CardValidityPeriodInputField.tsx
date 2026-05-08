@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import FieldLayout from "../common/FieldLayout";
-import Input from "../common/Input";
+import FieldLayout from "../../../common/shared/layout/FieldLayout";
+import Input from "../../../common/shared/ui/Input";
 import { useId } from "react";
 
 const CardValidityPeriodInputField = () => {

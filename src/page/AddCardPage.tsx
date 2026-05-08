@@ -1,14 +1,12 @@
 import styled from "@emotion/styled";
-import Card from "../components/common/Card";
-import CardInfoForm from "../components/feature/CardInfoForm";
+import Card from "../components/common/shared/ui/Card";
+import CardInfoForm from "../components/feature/pages/AddCardPage/CardInfoForm";
 
 const AddCardPage = () => {
   return (
     <Wrapper>
       <CardInfoForm>
-        {({ cardNumber, validityPeriod }) => (
-          <Card cardNumber={cardNumber} validityPeriod={validityPeriod} />
-        )}
+        {({ cardNumbers }) => <Card cardNumber={+cardNumbers.join("")} />}
       </CardInfoForm>
     </Wrapper>
   );

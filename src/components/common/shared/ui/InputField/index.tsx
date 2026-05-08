@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { useId, type ComponentProps } from "react";
-import Input from "./Input";
+import Input from "../Input";
 
 interface InputFieldProps extends ComponentProps<typeof Input> {
   label: string;

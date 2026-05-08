@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import Input from "../components/common/Input.tsx";
+import Input from "../components/common/shared/ui/Input/index.tsx";
 
 const meta = {
   title: "Input",
