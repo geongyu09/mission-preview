@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
-import InputsField from "../../../common/shared/ui/InputsField";
-import InputField from "../../../common/shared/ui/InputField";
+import InputsField from "../../../../common/shared/ui/InputsField";
+import InputField from "../../../../common/shared/ui/InputField";
 
 interface CardInfo {
   cardNumbers: [string, string, string, string];
@@ -108,7 +108,6 @@ const CardInfoForm = ({ children }: CardInfoFormProps) => {
           ]}
         />
 
-        {/*  */}
         <FormSectionTitle>카드 유효기간을 입력해 주세요</FormSectionTitle>
         <FormSectionDescription>
           월/년도(MMYY)를 순서대로 입력해 주세요.
